@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_home_institution0"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/img_photo"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignTop="@+id/tv_hotNumber0"
+        android:layout_alignParentStart="true"/>
+
+    <!-- 入驻机构标题-->
+    <TextView
+        android:id="@+id/tv_institution_title0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_photo"
+        android:layout_marginStart="9dp"
+        android:layout_toEndOf="@+id/img_photo"
+        android:maxLines="2"
+        android:maxWidth="180dp"
+        android:minWidth="165dp"
+        android:textColor="@color/home_text1"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- 入驻机构-->
+    <TextView
+        android:id="@+id/tv_settled0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_institution_title0"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/img_photo"
+        android:background="@drawable/home_institution_settled_bg_style"
+        android:padding="2dp"
+        android:textColor="@color/home_item_settled_color"
+        android:textSize="12sp"/>
+
+    <!-- 办公-->
+    <TextView
+        android:id="@+id/tv_office0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_institution_title0"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/tv_settled0"
+        android:background="@drawable/home_institution_office_bg_style"
+        android:padding="2dp"
+        android:textColor="@color/home_item_office_color"
+        android:textSize="12sp"/>
+
+    <!-- 评分-->
+    <TextView
+        android:id="@+id/tv_grade0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_institution_title0"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/tv_office0"
+        android:background="@drawable/home_institution_grade_bg_style"
+        android:padding="2dp"
+        android:textColor="@color/home_item_grade_color"
+        android:textSize="12sp"/>
+    <!-- 地址：-->
+    <TextView
+        android:id="@+id/tv_place0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_institution_title0"
+        android:layout_below="@+id/tv_settled0"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/img_photo"
+        android:maxWidth="165dp"
+        android:padding="2dp"
+        android:textColor="@color/home_text1"
+        android:textSize="12sp"/>
+
+    <!-- 热度 最多展示千万-->
+    <TextView
+        android:id="@+id/tv_hotNumber0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="14dp"
+        android:drawablePadding="2dp"
+        android:drawableStart="@mipmap/hot_number"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:maxEms="8"
+        android:maxWidth="75dp"
+        android:padding="1dp"
+        android:text="0"
+        android:textColor="@color/home_text1"
+        android:textSize="11sp"/>
+    <!-- 旧价格-->
+    <TextView
+        android:id="@+id/tv_oldPrice0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_newPrice0"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/home_item_market_color"
+        android:textSize="12sp"/>
+
+    <!-- 新价格-->
+    <TextView
+        android:id="@+id/tv_newPrice0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/home_item_settled_color"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_gray_bg"/>
+</RelativeLayout>

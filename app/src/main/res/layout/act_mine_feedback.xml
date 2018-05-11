@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.yilaole.ui.AssessMainActivity">
+
+    <!-- topbar-->
+    <include layout="@layout/topbar_common_itt"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_gray_bg"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@null"
+        android:gravity="top|left"
+        android:hint="@string/feedback_hint"
+        android:padding="15dp"
+        android:textColor="@color/home_text1"
+        android:textColorHint="@color/home_text2"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_gray_bg"/>
+
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="200dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/sure_btn_style"
+        android:text="@string/post"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+</LinearLayout>

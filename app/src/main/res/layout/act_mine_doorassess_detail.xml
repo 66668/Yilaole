@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_history_bg"
+    android:orientation="vertical"
+    tools:context="com.yilaole.ui.AssessMainActivity">
+
+    <include layout="@layout/topbar_common_itt"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_gray_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <!--审批状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_status1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"
+                        android:background="@mipmap/door_pass"/>
+
+                    <TextView
+                        android:id="@+id/tv_Status1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_status1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="已申请"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/time_status1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_Status1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="2017-10-20"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/gray_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_status2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"
+                        android:background="@mipmap/door_refuse"/>
+
+                    <TextView
+                        android:id="@+id/tv_Status2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_status2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="已申请"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/time_status2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_Status2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="2017-10-20"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/gray_light"/>
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/gray_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_status3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"
+                        android:background="@mipmap/door_pass_default"/>
+
+                    <TextView
+                        android:id="@+id/tv_Status3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_status3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="已申请"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/time_status3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_Status3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="2017-10-20"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/gray_light"/>
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/gray_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_status4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"
+                        android:background="@mipmap/detail_pass_default"/>
+
+                    <TextView
+                        android:id="@+id/tv_Status4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_status4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="已申请"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/time_status4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_Status4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="2017-10-20"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/gray_light"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+            <!--订单信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="296dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_bookid"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_bookid"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitId"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_booktype"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitType"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_bookstatus"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_applicationTime"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_applicationTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_institute"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_institute"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_assessTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_assessTime"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_instituteName"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_assessAdress"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_assessAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+            <!--联系人-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_contact"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_contact"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_contactName"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_contactPhone"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_contactPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_older"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_olderName"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_olderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_olderBirth"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_olderBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_assess_time"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_assess_resultTime"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_assessResultTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_assess_resultPerson"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_assessResultPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/door_assess_result"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_assessResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

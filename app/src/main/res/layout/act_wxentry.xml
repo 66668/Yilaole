@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center_horizontal"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <!--<TextView-->
+        <!--android:id="@+id/result_tv"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="这是SDK_Sample的入口界面"-->
+        <!--android:textSize="20dp"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/reg_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="注册微信事件发送器"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/goto_send_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="跳转到发消息界面"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/launch_wx_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="启动微信"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/check_timeline_supported_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="检查是否支持发送到朋友圈"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/scan_qrcode_login_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="扫码登录"-->
+        <!--android:visibility="invisible"/>-->
+
+</LinearLayout>

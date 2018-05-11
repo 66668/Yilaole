@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_item"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/white">
+
+    <!--头像 -->
+    <ImageView
+        android:id="@+id/img_assess"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:background="@mipmap/photo_default"/>
+
+    <!---->
+    <TextView
+        android:id="@+id/tv_office"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/img_assess"
+        android:background="@drawable/message_tv_style"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:padding="2dp"
+        android:text="官方"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
+    <!--姓名-->
+    <TextView
+
+        android:id="@+id/tv_assess_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/tv_office"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:padding="2dp"
+        android:text="某某某"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <!--消息内容-->
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_office"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/img_assess"
+        android:ellipsize="end"
+        android:maxWidth="260dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:text="2017-10-27"
+        android:textColor="@color/filter_reset_tvcl"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_gray_bg"/>
+</RelativeLayout>

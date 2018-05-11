@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_lightdark"
+              android:orientation="vertical">
+
+    <include layout="@layout/topbar_common_itt"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_gray_bg"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--机构-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/appointVisit_institute"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_institute_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <!--姓名-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/appointVisit_Name"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:maxLines="10"
+                    android:id="@+id/et_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/appointVisit_Name_hint"
+                    android:maxWidth="240dp"
+                    android:minWidth="50dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@mipmap/none_worning"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--联系方式-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/appointVisit_contact"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_contact"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/appointVisit_contact_hint"
+                    android:maxWidth="240dp"
+                    android:minWidth="50dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@mipmap/none_worning"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--姓名-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/assess_place"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/assess_place_hint"
+                    android:maxWidth="240dp"
+                    android:minWidth="50dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@mipmap/none_worning"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--长者-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/assess_choose_older"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="dja"
+                    android:id="@+id/tv_chooseOlder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/choose_forword"
+                    android:gravity="center_vertical"
+                    android:hint="@string/assess_choose_older_hint"
+                    android:minWidth="50dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+            <!--验证码-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:id="@+id/tv_createRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableEnd="@mipmap/choose_forword"
+                    android:gravity="center_vertical"
+                    android:text="@string/assess_create_older"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!--时间-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/appointVisit_time"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="2017-11-02"
+                    android:id="@+id/tv_appointTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/choose_forword"
+                    android:gravity="center_vertical"
+                    android:hint="@string/appointVisit_time_hint"
+                    android:minWidth="50dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!--备注-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_gravity="top"
+                android:background="@color/white"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:paddingTop="15dp"
+                    android:text="@string/remark_"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/remark_"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="@string/assess_remark_hint"
+                    android:minWidth="50dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_tvcl"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+            <!--确定-->
+            <Button
+                android:id="@+id/appoint_sure"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/sure_btn_style"
+                android:text="@string/appointVisit_sure"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

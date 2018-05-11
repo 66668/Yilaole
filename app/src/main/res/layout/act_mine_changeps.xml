@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/topbar_common_itt"/>
+    <!--切换布局总布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp">
+        <!--修改密码成功!-->
+        <RelativeLayout
+            android:id="@+id/layout_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/img_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/ps_success"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_success"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="@string/center_ps_success"
+                android:textColor="@color/colorPrice"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+        <!--输入-->
+        <LinearLayout
+            android:id="@+id/layout_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--原密码-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/changeps_et_style">
+
+                <EditText
+                    android:id="@+id/et_old"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/center_ps_old"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_btn_cl"/>
+
+                <ImageView
+                    android:id="@+id/img_watch_old"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="40dp"
+                    android:background="@mipmap/ps_watch2"/>
+            </FrameLayout>
+            <!--新密码-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/changeps_et_style">
+
+                <EditText
+                    android:id="@+id/et_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/center_ps_new"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/home_text1"
+                    android:textColorHint="@color/filter_reset_btn_cl"/>
+
+                <ImageView
+                    android:id="@+id/img_watch_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="40dp"
+                    android:background="@mipmap/ps_watch2"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/sure_btn_style"
+            android:text="@string/btn_sure"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

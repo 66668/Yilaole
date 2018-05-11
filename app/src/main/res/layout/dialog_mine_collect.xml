@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/dialog_comment_style">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="44dp"
+        android:background="@color/mine_collect_dialog_bg"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:weightSum="3">
+
+
+        <TextView
+            android:id="@+id/tv_weichat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="12dp"
+            android:drawableTop="@mipmap/mine_collect_weichat"
+            android:gravity="center_horizontal"
+            android:text="微信分享"/>
+
+        <TextView
+            android:id="@+id/tv_goin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="12dp"
+            android:drawableTop="@mipmap/mine_collect_institute"
+            android:gravity="center_horizontal"
+            android:text="进入机构"/>
+
+        <TextView
+            android:id="@+id/tv_uncollect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="12dp"
+            android:drawableTop="@mipmap/mine_collect_uncollect"
+            android:gravity="center_horizontal"
+            android:text="取消收藏"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_collect_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:paddingEnd="9dp"
+        android:paddingStart="9dp"
+        android:text="取消"
+        android:textColor="#666666"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

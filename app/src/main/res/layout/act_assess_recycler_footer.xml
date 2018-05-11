@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/assess_dash_style"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:drawableStart="@mipmap/back_icon"
+            android:gravity="center"
+            android:text="新增长者档案"
+            android:textColor="@color/filter_reset_tvcl"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/layout_assess"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <!--头像 -->
+        <ImageView
+            android:id="@+id/img_assess"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@mipmap/photo_default"/>
+        <!--姓名-->
+        <TextView
+            android:id="@+id/tv_assess_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/img_assess"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="某某某"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tv_assess_name"
+            android:layout_alignTop="@+id/tv_assess_name"
+            android:layout_toEndOf="@+id/tv_assess_name">
+            <!-- 性别图-->
+            <ImageView
+                android:id="@+id/img_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/back_icon"/>
+        </RelativeLayout>
+        <!--出生-->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="11dp"
+            android:layout_toEndOf="@+id/img_assess"
+            android:text="@string/assess_birthday"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="11dp"
+            android:layout_toEndOf="@+id/tv_time"
+            android:text="1970-8-9"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_assess_online"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/assess_online"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

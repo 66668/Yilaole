@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.InstitutionDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:background="@color/white">
+
+        <!-- app:contentScrim设置折叠时工具栏布局的颜色-->
+        <!--app:statusBarScrim设置折叠时状态栏的颜色-->
+        <!--app:layout_collapseMode="parallax"设置视差模式-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/white"
+            app:layout_collapseMode="parallax"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@color/colorPrimary"
+            app:titleEnabled="false"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/banner_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/xiangqing_banner"/>
+
+                <!--android:background="@mipmap/home_banner_index_mask" -->
+                <LinearLayout
+                    android:id="@+id/ll_index_loopImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"/>
+            </RelativeLayout>
+
+            <!--这两行代码 实现title居中-->
+            <!--app:contentInsetLeft="0dp"-->
+            <!--app:contentInsetStart="0dp"-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/id_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- 详情内容
+    使用NestedScrollView替代ScrollView
+    必须设置：滚动响应
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.toolbaricon.ScrollingActivity"
+        tools:showIn="@layout/act_institution_detail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 认领机构-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/colorPrice"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_realPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tv_marketPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/tv_realPrice"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+                <!--认领机构-->
+                <TextView
+                    android:id="@+id/tv_godo"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/white"
+                    android:drawableEnd="@mipmap/detail_claim_to"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="@string/instite_detail_renlingjigou"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+                <!--已认领-->
+                <TextView
+                    android:id="@+id/tv_done"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/detail_claim_doneColor"
+                    android:drawableEnd="@mipmap/detail_claim_done"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:text="@string/instite_detail_yirenling"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+            <!-- 机构简介-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <ImageView
+                    android:id="@+id/detail_institute_placeImg"
+                    android:layout_width="94dp"
+                    android:layout_height="94dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@mipmap/item_bg_default1"/>
+                <!-- 机构名-->
+                <TextView
+                    android:id="@+id/tv_detail_institute_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/detail_institute_placeImg"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <!-- 机构电话-->
+                <!--<TextView-->
+                <!--android:id="@+id/tv_detail_institute_phone0"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tv_detail_institute_name"-->
+                <!--android:layout_marginStart="12dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_toEndOf="@+id/detail_institute_placeImg"-->
+                <!--android:lines="1"-->
+                <!--android:text="@string/instite_detail_phone"-->
+                <!--android:textColor="@color/home_text2"-->
+                <!--android:textSize="15sp"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_detail_institute_phone"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tv_detail_institute_name"-->
+                <!--android:layout_marginStart="12dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_toEndOf="@+id/tv_detail_institute_phone0"-->
+                <!--android:lines="1"-->
+                <!--android:textColor="@color/home_text2"-->
+                <!--android:textSize="15sp"/>-->
+                <!-- 民办-->
+                <TextView
+                    android:id="@+id/tv_civilianRunOrStateRun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/detail_institute_placeImg"
+                    android:background="@drawable/detail_civilianrun_style"
+                    android:padding="4dp"
+                    android:textColor="@color/detail_tvcr88"/>
+
+                <!-- 入驻机构-->
+                <TextView
+                    android:id="@+id/tv_entreing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/tv_civilianRunOrStateRun"
+                    android:background="@drawable/detail_enteringinstitute_style"
+                    android:padding="4dp"
+                    android:textColor="@color/detail_tvcr88"/>
+                <!-- 评分-->
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="67dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@mipmap/detail_score_bg"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+            <!--收住对象-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_object"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <!-- 成立日期,机构床位-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!-- 成立日期-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <ImageView
+                        android:id="@+id/img_establishment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:background="@mipmap/detail_institute_establishment"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@+id/img_establishment"
+                        android:text="@string/instite_detail_establishmentTime"
+                        android:textColor="@color/filter_reset_tvcl"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_establishmentTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/img_establishment"
+                        android:textColor="@color/filter_reset_tvcl"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <!--床位数量-->
+                    <ImageView
+                        android:id="@+id/img_bedCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:background="@mipmap/detail_bedcount"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@+id/img_bedCount"
+                        android:text="@string/instite_detail_bedCount"
+                        android:textColor="@color/filter_reset_tvcl"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_bedCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/img_bedCount"
+                        android:textColor="@color/filter_reset_tvcl"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!-- 机构地址-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp">
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toStartOf="@+id/img_institute_map"
+                    android:gravity="top|left"
+                    android:paddingBottom="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="12dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/img_institute_map"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@mipmap/detail_institute_map"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+
+            <!-- 机构图片-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/instite_detail_picture"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_institute_morePic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@mipmap/icon_left"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="@string/home_news_more"
+                    android:textColor="@color/home_text2"
+                    android:textSize="13sp"/>
+
+                <!-- 机构图片列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/institute_imgs_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_institute_morePic"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp">
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+            <!-- 机构特色-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="@string/instite_detail_special"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!-- 该出的数据应该来自网络，组成多行三列列表-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/service_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+
+            <!--通用功能 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tv_serviceNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_fuwuxuzhi"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_notes"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_yiyangtese"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_yiyang"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_yiyangtese"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_zizhi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_fuwuxuzhi"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_jigouzizhi"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_quanjing"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_fuwuxuzhi"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_quanjing"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+            <!--通用功能 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tv_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_shipinjieshao"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_videojieshao"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_travel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_chengcheluxian"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_chengcheluxian"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/Price_standard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_shoufeibiaozhun"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_shoufeibiaozhun"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/xiangqing_dianping"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/instite_detail_yonghudianping"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+
+            <!-- 院长寄语-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="@string/instite_detail_yuanzhangjiyu"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/tv_deanPic"
+                    android:layout_width="74dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@mipmap/item_bg_default1"/>
+
+                <TextView
+                    android:id="@+id/tv_deanName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_deanPic"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toStartOf="@+id/tv_dean_content"
+                    android:background="@mipmap/detail_dean_tvbg"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_dean_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/tv_deanPic"/>
+
+                <ImageView
+                    android:id="@+id/img_isDeanContentShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_dean_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/detail_show_down"
+                    android:padding="5dp"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+
+            <!-- 机构简介-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="@string/instite_detail_jigoujianjie"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--一段html代码-->
+                <!--<TextView-->
+                <!--android:id="@+id/tv_instrudution"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="15dp"-->
+                <!--android:layout_marginStart="15dp"/>-->
+                <WebView
+                    android:id="@+id/tv_instrudution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"/>
+
+                <ImageView
+                    android:id="@+id/img_isIntrudutionShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_instrudution"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/detail_show_down"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+            <!--评分 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <!-- 综合分数-->
+                <TextView
+                    android:id="@+id/tv_combinedScore"
+                    android:layout_width="63dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrice"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"/>
+                <!-- 信息分数-->
+                <TextView
+                    android:id="@+id/tv_messageScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/tv_combinedScore"
+                    android:text="@string/instite_detail_score_message"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="15sp"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_message"
+                    android:layout_width="150dp"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/tv_messageScore"
+                    android:layout_alignTop="@+id/tv_messageScore"
+                    android:layout_toEndOf="@+id/tv_messageScore"
+                    android:max="50"
+                    android:progress="48"
+                    android:progressDrawable="@drawable/seekbar_progress_style"
+                    android:thumb="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_message_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_messageScore"
+                    android:layout_alignTop="@+id/tv_messageScore"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/seekbar_message"
+                    android:gravity="center"
+                    android:text="4.8分"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="15sp"/>
+
+                <!-- 评价分数-->
+                <TextView
+                    android:id="@+id/tv_estimateScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_toEndOf="@+id/tv_combinedScore"
+                    android:text="@string/instite_detail_score_estimate"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="15sp"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_estimate"
+                    android:layout_width="150dp"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/tv_estimateScore"
+                    android:layout_alignTop="@+id/tv_estimateScore"
+                    android:layout_toEndOf="@+id/tv_estimateScore"
+                    android:max="50"
+                    android:progress="46"
+                    android:progressDrawable="@drawable/seekbar_progress_style"
+                    android:thumb="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_estimate_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_estimateScore"
+                    android:layout_alignTop="@+id/tv_estimateScore"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/seekbar_message"
+                    android:gravity="center"
+                    android:text="4.6分"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="15sp"/>
+
+
+            </RelativeLayout>
+
+            <!-- 颐福来指数-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/instite_detail_score_intruduction"
+                android:textColor="@color/colorPrice"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/home_gray_bg"/>
+            <!-- 用户评价-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/instite_detail_score_userEstimate"
+                    android:textColor="@color/home_text1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_institute_moreEstimate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableEnd="@mipmap/icon_left"
+                    android:drawablePadding="5dp"
+                    android:padding="4dp"
+                    android:text="@string/home_news_more"
+                    android:textColor="@color/home_text2"
+                    android:textSize="13sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/comment_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_institute_moreEstimate"
+                    android:layout_marginTop="15dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+
+            <!-- 顶部bar布局的占用布局-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/home_gray_bg"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- 底部tabbar-->
+    <FrameLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/city_topbar_bg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tv_appointVisit_create"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@mipmap/detail_booktrce"
+                android:gravity="center"
+                android:text="@string/instite_detail_booktrce"
+                android:textColor="@color/detail_bottom_color"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_doorToAssess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@mipmap/detail_assessment"
+                android:gravity="center"
+                android:text="@string/instite_detail_assess"
+                android:textColor="@color/detail_bottom_color"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_assess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@mipmap/detail_mytell"
+                android:gravity="center"
+                android:text="@string/instite_detail_mytell"
+                android:textColor="@color/detail_bottom_color"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="3dp"
+                android:drawableTop="@mipmap/detail_internetto"
+                android:gravity="center"
+                android:text="@string/instite_detail_internetTo"
+                android:textColor="@color/detail_bottom_color"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="34dp"
+              android:layout_marginBottom="8dp"
+              android:layout_marginEnd="15dp"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="8dp"
+              android:background="@drawable/city_search_box_bg"
+              android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_search_city"
+        tools:ignore="ContentDescription"/>
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="@string/city_search_hint"
+        android:inputType="text"
+        android:lines="1"
+        android:paddingEnd="5dp"
+        android:paddingStart="14dp"
+        android:textColor="@color/city_hot_tvcl"
+        android:textColorHint="@color/city_search_hint_color"
+        android:textSize="14sp"
+        tools:ignore="RtlHardcoded"/>
+
+    <ImageView
+        android:id="@+id/iv_search_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:src="@mipmap/cp_ic_search_clear"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"/>
+</LinearLayout>

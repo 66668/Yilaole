@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 新闻样式3，三张小图-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_news_item3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="190dp"
+    android:minHeight="170dp">
+
+    <!--三张图片-->
+    <LinearLayout
+        android:id="@+id/imgs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_below="@+id/tv_news_title3"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_smallphoto2"
+                android:layout_width="110dp"
+                android:layout_height="94dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="15dp"
+                android:background="@mipmap/item_bg_default1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_smallphoto3"
+                android:layout_width="110dp"
+                android:layout_height="94dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="15dp"
+                android:background="@mipmap/item_bg_default1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_smallphoto1"
+                android:layout_width="110dp"
+                android:layout_height="94dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="15dp"
+                android:background="@mipmap/item_bg_default1"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- 标题-->
+    <TextView
+        android:id="@+id/tv_news_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="养老院最新资讯，你所不知道的知识你所不知道的知识你所不知道的知识"
+        android:textColor="@color/home_text1"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- 精品资讯-->
+    <TextView
+        android:layout_below="@+id/imgs_layout"
+        android:id="@+id/tv_good3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/news_Best"
+        android:textColor="@color/home_text2"
+        android:textSize="12sp"/>
+
+    <!-- 时间-->
+    <TextView
+        android:id="@+id/tv_time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_good3"
+        android:layout_alignTop="@+id/tv_good3"
+        android:layout_toEndOf="@+id/tv_good3"
+        android:gravity="center"
+        android:text="2小时前"
+        android:textColor="@color/home_text2"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_gray_bg"/>
+</RelativeLayout>

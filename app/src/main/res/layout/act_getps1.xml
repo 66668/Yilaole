@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical"
+    app:theme="@style/TranslucentAppTheme"
+    tools:context="com.yilaole.ui.LoginActivity">
+
+    <!-- 关闭-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/ps_for_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:background="@mipmap/login_close"/>
+
+    </RelativeLayout>
+
+    <!-- 用户名-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/tv_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="20dp"
+            android:drawableStart="@mipmap/login_user_ps"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_login_user"
+            android:inputType="number"
+            android:lines="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/et_cursor_style"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"/>
+
+    <!-- 验证码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tv_identy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_toStartOf="@+id/getIdenty"
+            android:background="@android:color/transparent"
+            android:drawablePadding="20dp"
+            android:drawableStart="@mipmap/login_identy_ps"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_identy_ps"
+            android:lines="1"
+            android:maxLength="12"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/et_cursor_style"
+            android:textSize="17sp"/>
+
+        <com.yilaole.widget.CountDownButton
+            android:id="@+id/getIdenty"
+            android:layout_width="88dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="39dp"
+            android:background="@drawable/reg_tv_select_style"
+            android:gravity="center"
+            android:text="@string/get_identy"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_btn_select_style"
+            android:gravity="center"
+            android:text="@string/login_nextstep"
+            android:textColor="@drawable/login_log_tv_select_style"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

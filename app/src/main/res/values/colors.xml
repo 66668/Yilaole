@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff8b45</color>
+    <color name="colorPrimaryDark">#ff8b45</color>
+    <color name="colorAccent">#ff8b45</color>
+
+    <!-- 字体颜色相关-->
+    <color name="home_text1">#333333</color><!-- 首页字体颜色-->
+    <color name="home_text2">#666666</color><!-- 首页字体颜色-->
+    <color name="search_tv_color">#a3a3a3</color>
+    <color name="search_hot">#666666</color>
+    <color name="institute_tv1">#272727</color><!-- 评论字体颜色-->
+    <color name="filter_default_tvcl">#5a626d</color>
+    <color name="filter_reset_btn_cl">#bbbbbb</color>
+    <color name="filter_press_btncl">#f59a55</color>
+    <color name="filter_reset_tvcl">#999999</color>
+
+    <color name="photo_tv">#059cc7</color> <!--选择相机弹窗的字体颜色-->
+    <!-- 首页-->
+    <color name="bar_left">#ff8b45</color><!-- 首页渐变色 左-->
+    <color name="bar_right">#f0cb35</color><!-- 首页渐变色 右-->
+
+    <color name="white">#FFFFFF</color>
+    <color name="red">#ff0000</color>
+    <color name="white_lightdark">#f4f1f1</color>
+    <color name="black">#000000</color>
+    <color name="commonColor">#ff8b45</color>
+    <color name="refresh_color1">#ff8b45</color>
+    <color name="refresh_color2">#f97627</color>
+    <color name="refresh_color3">#f46108</color>
+    <color name="commonUnselectColor">#949494</color>
+    <color name="institution_gallery_bg">#303030</color><!-- 养老机构相册背景色-->
+    <color name="nursing_institution_bg">#fc9642</color><!-- 养老机构背景色-->
+    <color name="nursing_institution_map_bg">#528ef4</color><!-- 养老地图背景色-->
+    <color name="nursing_institution_tell_bg">#14c544</color><!-- 在线评估背景色-->
+
+    <color name="home_gray_bg">#e2e0e0</color><!-- 首页灰色背景色-->
+    <color name="gray_light">#b9b6b6</color><!-- 首页灰色背景色-->
+
+    <color name="home_item_settled_color">#fe9863</color><!--item 入驻机构字体颜色-->
+    <color name="home_item_office_color">#8cc6f1</color><!--item 办公字体颜色-->
+    <color name="home_item_grade_color">#5cbf45</color><!--item 评分字体颜色-->
+    <color name="home_item_market_color">#979797</color><!--item 市场价字体颜色-->
+    <color name="home_item_settled_bgcolor">#feedd5</color><!--item 入驻机构背景颜色-->
+    <color name="home_item_office_bgcolor">#d0e9fc</color><!--item  办公背景颜色-->
+    <color name="home_item_grade_bgcolor">#C8FEBA</color><!--item  评分背景颜色-->
+
+    <!-- 城市定位颜色-->
+    <color name="city_topbar_bg">#eeeeee</color>
+    <color name="city_stroke_cl">#bbbbbb</color><!-- 城市边框颜色-->
+    <color name="cp_divider">#E5E5E5</color>
+    <color name="cp_content_bg">#F3F3F3</color>
+    <color name="city_search_hint_color">#999999</color>
+    <color name="city_gray">#cc646464</color><!-- 定位 灰色-->
+    <color name="city_hot_tvcl">#60616b</color>
+    <!-- 首页搜索-->
+
+    <color name="search_history_bg">#eeeeee</color><!--背景灰 -->
+    <color name="mine_collect_dialog_bg">#dddddd</color><!--背景灰 -->
+
+    <!-- 机构筛选-->
+    <color name="black_p50">#7f000000</color>
+    <color name="gray_e7e7e7">#e7e7e7</color>
+    <color name="filter_layout_btn_bg">#f7f7f7</color>
+    <color name="b_c_fafafa">#fafafa</color>
+
+    <color name="comment_divider">#cccccc</color>
+    <!-- 机构详情-->
+    <color name="detail_claim_doneColor">#f95d33</color>
+    <color name="detail_bottom_color">#595a62</color>
+    <color name="colorPrice">#ff8b45</color>
+    <color name="detail_tvcr88">#888888</color>
+    <color name="detail_labelColor">#f4f2f1</color>
+    <color name="dialog_bg">@color/material_grey_50</color>
+</resources>

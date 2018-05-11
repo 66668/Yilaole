@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+          package="com.aurelhubert.ahbottomnavigation"
+    >
+    <!-- 主界面的bottombar-->
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        >
+
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页 文字轮播item-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/tv_marquee"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:drawablePadding="9dp"
+          android:drawableStart="@mipmap/round"
+          android:gravity="center_vertical"
+          android:textColor="@color/home_text1"
+          android:textSize="15sp"/>

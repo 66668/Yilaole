@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.yilaole">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/><!-- 悬浮窗权限-->
+    <!-- 相机权限(需要申请)-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- ******************************************************读写权限********************************************************-->
+    <!--(需要申请)-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- ******************************************************网络相关权限********************************************************-->
+    <!-- wifi权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <!-- 拨号权限(需要申请) -->
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
+
+    <!-- ******************************************************百度统计 权限配置_start******************************************************-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/><!-- 用于读取手机当前的状态 必用-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!-- ******************************************************百度统计 权限配置_end******************************************************-->
+
+
+    <!-- ******************************************************百度地图/高德地图 权限配置_start******************************************************-->
+    <!--定位(需要申请)-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--用于提高GPS定位速度-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true"/>
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <!-- ******************************************************百度地图/高德地图 权限配置_end******************************************************-->
+
+    <application
+        android:name=".base.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--权限-->
+        <activity
+            android:name="com.yilaole.permissions.PermissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GrantorNoDisplay"
+            >
+        </activity>
+
+        <!--微信登陆act 必须
+        android:exported="true"必填-->
+        <activity
+            android:name="com.yilaole.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/GrantorNoDisplay"
+            >
+        </activity>
+
+
+        <!-- =========================================================首页相关=============================================================-->
+        <!-- android:theme="@style/AppTheme.NoActionBar/TranslucentAppTheme"-->
+        <!-- 欢迎页-->
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--主页 android:screenOrientation="portrait" -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentAppTheme">
+
+        </activity>
+        <!-- 城市定位-->
+        <activity
+            android:name=".ui.CityPickerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+
+        <!--搜索-->
+        <activity
+            android:name=".ui.SearchHistoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 筛选 养老机构-->
+        <activity
+            android:name=".ui.InstitutionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--养老地图-->
+        <activity
+            android:name=".ui.MapOfPensionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--在线评估-->
+        <activity
+            android:name=".ui.AssessMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
+        <!-- =========================================================机构相关=============================================================-->
+
+
+        <!-- 机构详情-->
+        <activity
+            android:name=".ui.InstitutionDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 机构详情 相册list-->
+        <activity
+            android:name=".ui.DetailGalleryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 机构详情 相册大图-->
+        <activity
+            android:name=".ui.DetailGalleryBigActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!-- 服务须知01-->
+        <activity
+            android:name=".ui.DetailServiceNotesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 医养特色02-->
+        <activity
+            android:name=".ui.DetailCharacteristicActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 机构资质03-->
+        <activity
+            android:name=".ui.DetailQualificationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 360全景04-->
+        <activity
+            android:name=".ui.DetailFullViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 视频介绍05-->
+        <activity
+            android:name=".ui.DetailVideoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 乘车线路06-->
+        <activity
+            android:name=".ui.DetailTravlLineActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 收费标准07-->
+        <activity
+            android:name=".ui.DetailFeesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 用户点评08-->
+        <activity
+            android:name=".ui.DetailUserCommentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 创建点评-->
+        <activity
+            android:name=".ui.DetailCommentCreateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 创建点评 有订单id-->
+        <activity
+            android:name=".ui.MineCommentCreateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--预约参观-->
+        <activity
+            android:name=".ui.DetailAppointVisitCreatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--上门评估-->
+        <activity
+            android:name=".ui.DetailDoorToAssessCreatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
+        <!-- =========================================================资讯相关=============================================================-->
+        <!-- 资讯详情-->
+        <activity
+            android:name=".ui.NewsDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- =========================================================个人相关=============================================================-->
+        <!-- 登陆-->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentAppTheme">
+        </activity>
+
+        <!-- 注册-->
+        <activity
+            android:name=".ui.RegistActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentAppTheme">
+        </activity>
+
+        <!-- 找回密码1-->
+        <activity
+            android:name=".ui.GetPassWordOneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentAppTheme">
+        </activity>
+        <!-- 找回密码2-->
+        <activity
+            android:name=".ui.GetPassWordTwoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentAppTheme">
+        </activity>
+
+        <!--预约参观list-->
+        <activity
+            android:name=".ui.MineAppointVisitListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--预约参观详情-->
+        <activity
+            android:name=".ui.MineAppointVisitDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--上门评估list-->
+        <activity
+            android:name=".ui.MineDoorAssessListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--上门评估详情-->
+        <activity
+            android:name=".ui.MineDoorAssessDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人中心-->
+        <activity
+            android:name=".ui.MineCenterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人 设置-->
+        <activity
+            android:name=".ui.MineSettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人 我的评价-->
+        <activity
+            android:name=".ui.MineCommentListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人 我的收藏-->
+        <activity
+            android:name=".ui.MineCollectListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人中心-修改密码-->
+        <activity
+            android:name=".ui.MineChangePsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人中心-修改昵称-->
+        <activity
+            android:name=".ui.MineChangeNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人中心-关于我们-->
+        <activity
+            android:name=".ui.MineAboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!--个人中心-意见反馈-->
+        <activity
+            android:name=".ui.MineFeedBackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!--个人中心-政策-->
+        <activity
+            android:name=".ui.MinePolicyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人中心-我的消息list-->
+        <activity
+            android:name=".ui.MineMessageListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!--个人中心-我的消息 详情-->
+        <activity
+            android:name=".ui.MineMessageDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!-- ******************************************************长者档案相关******************************************************-->
+        <!--长者档案list-->
+        <activity
+            android:name=".ui.older.OlderRecordListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
+        <!-- ******************************************************高德地图定位配置-start******************************************************-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="daa16d25b30e4d45dd248a63df6c72bc"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- ******************************************************高德地图定位配置-end******************************************************-->
+
+        <!-- ******************************************************百度统计配置_start******************************************************-->
+        <!-- 您从百度网站获取的APP KEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="102f13e2a5"/> <!-- 请替换成自己的appKey -->
+        <!-- 渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="Baidu Market"/>
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true"/>
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START"/>
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false"/>
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true"/>
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true"/>
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true"/>
+
+        <!-- ******************************************************百度统计配置_end******************************************************-->
+
+        <!-- ******************************************************百度地图配置_start******************************************************-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="kLkmXC9a19EgtnYOd9UeX3PdGbvv5CEg"/>
+
+        <!-- ******************************************************百度地图配置_end******************************************************-->
+
+    </application>
+
+</manifest>

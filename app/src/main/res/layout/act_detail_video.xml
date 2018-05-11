@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/topbar_common_itt"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/test_video"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_videoName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|left"
+        android:paddingStart="15dp"
+        android:text="视频名称"
+        android:textColor="@color/home_text1"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_videoContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="视频介绍"
+        android:textColor="@color/home_text1"
+        android:textSize="15sp"/>
+
+</LinearLayout>

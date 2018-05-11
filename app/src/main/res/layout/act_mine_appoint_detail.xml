@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_history_bg"
+    android:orientation="vertical"
+    tools:context="com.yilaole.ui.AssessMainActivity">
+
+    <include layout="@layout/topbar_common_itt"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_gray_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <!--审批状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true">
+
+                        <ImageView
+                            android:id="@+id/img_status1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="14dp"
+                            android:background="@mipmap/detail_pass"/>
+
+                        <TextView
+                            android:id="@+id/tv_status1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_status1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/home_text1"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/time_status1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_status1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/home_text1"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@color/gray_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true">
+
+                        <ImageView
+                            android:id="@+id/img_status2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="14dp"
+                            android:background="@mipmap/detail_undovisit"/>
+
+                        <TextView
+                            android:id="@+id/tv_status2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_status2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/home_text1"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/time_status2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_status2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/home_text1"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+            <!--订单信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="296dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_bookid"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_bookid"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitId"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_booktype"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitType"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_bookstatus"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_visitTime"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_institute"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_institute"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_instituteName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+            <!--联系人-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_contact"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_contact"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_contactName"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_contactPhone"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_contactPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_number"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_visitNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/detail_older"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_olderName"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_olderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/visit_olderAge"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_olderAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/img_block"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/institute_tv1"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

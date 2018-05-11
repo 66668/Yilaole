@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/search_history_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <!--左 -->
+        <RelativeLayout
+            android:id="@+id/layout_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/back_icon"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="85dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/layout_back"
+            android:background="@drawable/city_search_box_bg"
+            android:drawablePadding="12dp"
+            android:drawableStart="@mipmap/icon_search_city"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:textColor="@color/search_tv_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/search_btn_bg"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="15dp"
+            android:text="@string/search_hot"
+            android:textColor="@color/search_hot"
+            android:textSize="12sp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_hot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|start"
+            android:paddingStart="15dp"
+            android:text="@string/search_history"
+            android:textColor="@color/search_hot"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/img_deleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/icon_delete"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/img_deleteAll"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

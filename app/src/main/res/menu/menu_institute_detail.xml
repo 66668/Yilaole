@@ -1,0 +1,23 @@
+<!-- 机构详情 使用的toolbar菜单-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.yilaole.ui.InstitutionDetailActivity">
+    <!-- 收藏按钮-->
+    <!--<item-->
+        <!--android:visible="false"-->
+        <!--android:id="@+id/action_collect"-->
+        <!--android:icon="@mipmap/xiangqing_xingxing"-->
+        <!--android:title="@string/app_name"-->
+        <!--app:showAsAction="ifRoom"/>-->
+    <item
+        android:id="@+id/action_collect"
+        android:icon="@mipmap/detail_collect2"
+        android:title="@string/app_name"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_share"
+        android:icon="@mipmap/detail_share2"
+        android:title="@string/app_name"
+        app:showAsAction="ifRoom"/>
+</menu>

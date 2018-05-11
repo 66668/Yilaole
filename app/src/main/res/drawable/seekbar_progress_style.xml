@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- seekbar背景图样式-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景图-->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/seekbar_progress_bg_style"/>
+    <!-- 进度条背景图-->
+    <item
+        android:id="@android:id/progress">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item android:state_enabled="false">
+                    <color android:color="@android:color/transparent"/>
+                </item>
+                <item android:drawable="@drawable/seekbar_progress_score_style"/>
+            </selector>
+        </scale>
+    </item>
+
+
+</layer-list>

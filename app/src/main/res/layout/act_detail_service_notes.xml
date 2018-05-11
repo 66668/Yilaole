@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/topbar_common_itt"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|left"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="@string/instite_detail_notes"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/service_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/home_gray_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|left"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="@string/instite_detail_detail"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"/>
+
+
+            <WebView
+                android:id="@+id/tv_service_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="top|left"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 机构点评 图片item-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_item"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp">
+
+    <ImageView
+        android:id="@+id/pic_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

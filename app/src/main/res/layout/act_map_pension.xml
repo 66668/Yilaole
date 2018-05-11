@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yilaole.map.slidingup.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slideup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    slideup:umanoDragView="@+id/dragView"
+    slideup:umanoOverlay="true"
+    slideup:umanoPanelHeight="54dp"
+    slideup:umanoParallaxOffset="80dp"
+    slideup:umanoScrollableView="@+id/dropDownMenuMap"
+    slideup:umanoShadowHeight="4dp">
+
+    <!--主布局-地图布局位置-->
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <!-- SLIDING LAYOUT -->
+    <LinearLayout
+        android:id="@+id/layout_slidingup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--固定头部-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            >
+            <!--说明-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="已收录"
+                    android:textSize="14sp"/>
+                <!--区名-->
+                <TextView
+                    android:id="@+id/distract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="昌平区"
+                    android:textColor="@color/commonColor"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="3000家养老机构"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!--按钮-->
+            <ImageView
+                android:id="@+id/img_upDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:background="@mipmap/map_up"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light"/>
+
+        </RelativeLayout>
+
+        <!--内容展示布局-->
+
+        <!-- 代码中筛选器的高度是50dp，RecyclerView要留50dp给DropDownMenu-->
+        <com.yilaole.filter.DropDownMenuMap
+            android:id="@+id/dropDownMenuMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--DropDownMenu类中有个重写的onFinishInflate方法，
+            布局应该是com.yilaole.filter.DropDownMenu第一层子布局id-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@id/mFilterRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"/>
+        </com.yilaole.filter.DropDownMenuMap>
+    </LinearLayout>
+</com.yilaole.map.slidingup.SlidingUpPanelLayout>

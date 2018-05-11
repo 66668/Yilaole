@@ -1,0 +1,127 @@
+<!--  android:fitsSystemWindows="true"-->
+<!--顶部导航栏跟随移动-->
+<!--已不用-->
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 设置悬浮效果-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ctb"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/home_topbar_bg"
+            app:contentScrim="@null"
+            app:layout_scrollFlags="scroll">
+
+            <RelativeLayout
+                android:id="@+id/topbar_local_search"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <View
+                    android:id="@+id/blockView"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:id="@+id/tv_news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/blockView"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:text="养老资讯"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_news_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/blockView"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center_vertical"
+                    android:text="投稿"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <!--图片轮播-->
+        <!-- app:layout_scrollFlags="scroll|enterAlways"-->
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/news_banner_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <!--android:background="@mipmap/home_banner_index_mask" -->
+            <LinearLayout
+                android:id="@+id/ll_index_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+        </RelativeLayout>
+
+        <!-- 悬浮效果bar-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/news_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/commonColor"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/commonColor"
+            app:tabTextAppearance="@style/TabText"
+            app:tabTextColor="@color/home_text1"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/news_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>

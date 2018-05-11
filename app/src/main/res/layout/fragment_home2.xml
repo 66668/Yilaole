@@ -1,0 +1,326 @@
+<!--  android:fitsSystemWindows="true"-->
+<!--定位的导航栏固定-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 设置悬浮效果 |app:layout_scrollFlags="scroll|enterAlways"-->
+    <LinearLayout
+        android:id="@+id/ctb"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/home_topbar_bg"
+        android:orientation="vertical"
+        app:contentScrim="@null"
+        app:layout_scrollFlags="scroll">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@android:color/transparent"/>
+
+        <RelativeLayout
+            android:id="@+id/topbar_local_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="enterAlways|scroll"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <!-- topbar的定位-->
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="108dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/topbar_et_location_style"
+                android:drawableEnd="@mipmap/location_to"
+                android:drawableStart="@mipmap/icon_localize"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+
+                android:paddingStart="15dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+            <!-- topbar的搜索-->
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="27dp"
+                android:layout_toRightOf="@+id/tv_location"
+                android:background="@drawable/topbar_et_search_style"
+                android:drawablePadding="14dp"
+                android:drawableStart="@mipmap/icon_search"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingStart="19dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--android:fitsSystemWindows="true"-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ctb">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+            <!--图片轮播-->
+            <!-- app:layout_scrollFlags="scroll|enterAlways"-->
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_scrollFlags="scroll">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/loopImg_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"/>
+
+                <!--android:background="@mipmap/home_banner_index_mask" -->
+                <LinearLayout
+                    android:id="@+id/ll_index_loopImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"/>
+            </RelativeLayout>
+
+            <!-- 功能模块-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll">
+                <!-- 养老机构-->
+                <RelativeLayout
+                    android:id="@+id/layout_institution"
+                    android:layout_width="0dp"
+                    android:layout_height="61dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:background="@color/nursing_institution_bg"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="2dp"
+                        android:drawableTop="@mipmap/icon_mechanism"
+                        android:gravity="center_horizontal"
+                        android:text="@string/home_institution"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+                <!-- 养老地图-->
+                <RelativeLayout
+                    android:id="@+id/layout_map"
+                    android:layout_width="0dp"
+                    android:layout_height="61dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:background="@color/nursing_institution_map_bg"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="2dp"
+                        android:drawableTop="@mipmap/icon_map"
+                        android:gravity="center_horizontal"
+                        android:text="@string/home_institution_map"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+
+                <!-- 在线评估-->
+                <RelativeLayout
+                    android:id="@+id/layout_assess"
+                    android:layout_width="0dp"
+                    android:layout_height="61dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:background="@color/nursing_institution_tell_bg"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="2dp"
+                        android:drawableTop="@mipmap/home_assessment"
+                        android:gravity="center_horizontal"
+                        android:text="@string/home_institution_tell"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/home_gray_bg"
+                app:layout_scrollFlags="scroll"/>
+            <!-- 消息轮播/跑马灯-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_scrollFlags="scroll">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@mipmap/img_1"/>
+
+                <lib.yilaole.textbanner.MarqueeLayout
+                    android:id="@+id/marquee_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:enableAlphaAnim="true"
+                    app:enableScaleAnim="false"
+                    app:orientation="up"
+                    >
+                </lib.yilaole.textbanner.MarqueeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/home_gray_bg"
+                app:layout_scrollFlags="scroll"/>
+
+            <!-- 最新资讯-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll">
+
+                <RelativeLayout
+                    android:id="@+id/layout_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:drawablePadding="7dp"
+                        android:drawableStart="@mipmap/icon_information"
+                        android:gravity="center"
+                        android:text="@string/home_news"
+                        android:textColor="@color/home_text1"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/news_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp"
+                        android:drawableEnd="@mipmap/icon_left"
+                        android:drawablePadding="2dp"
+                        android:gravity="center"
+                        android:text="@string/home_news_more"
+                        android:textColor="@color/home_text2"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+                <!-- 资讯横向滑动-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/news_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layout_news"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/home_gray_bg"
+                app:layout_scrollFlags="scroll"/>
+            <!-- 悬浮效果bar-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/commonColor"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/commonColor"
+                app:tabTextAppearance="@style/TabText"
+                app:tabTextColor="@color/home_text1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/home_gray_bg"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <!--AppBarLayout就是占据一个toolbar的位置，CollapsingToolbarLayout是官方封装好的收缩顶部的viewGroup，FrameLayout的子类-->
+        <!--CollapsingToolbarLayout会在滑动收缩顶部的时候，自动给toolbar留一个位置，根据需求，直接在这个布局里面加两个toolbar的自定义布局-->
+
+        <!--viewpager外面嵌套一个NestedScrollView，测试：可以上下滑动，但不可以tab间左右滑动,所以NestedScrollView可以不写!-->
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:id="@+id/nestedScrollView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

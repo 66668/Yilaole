@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 上门评估列表item-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="74dp"
+                android:background="@color/white_lightdark">
+
+    <RelativeLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_name0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/appointVisit_institute"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+        <!--机构名-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_name0"
+            android:maxWidth="200dp"
+            android:minWidth="50dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+        <!--评价-->
+        <TextView
+            android:id="@+id/tv_assess"
+            android:layout_width="41dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/appointvisit_assess_false"
+            android:gravity="center"
+            android:text="@string/assess"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_buyTime0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/buyTime"
+            android:textColor="@color/home_text2"
+            android:textSize="12sp"/>
+        <!--下单时间-->
+        <TextView
+            android:id="@+id/tv_buyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/tv_buyTime0"
+            android:textColor="@color/home_text2"
+            android:textSize="12sp"/>
+        <!--已审核-->
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/home_text2"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/tv_status"
+            android:text="@string/status_"
+            android:textColor="@color/home_text2"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

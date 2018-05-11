@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 个人-我的评论item-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="154dp">
+
+
+    <ImageView
+        android:id="@+id/CommentUserImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:background="@mipmap/photo_default"/>
+
+    <TextView
+        android:id="@+id/tv_commentUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/CommentUserImg"
+        android:gravity="center_vertical"
+        android:padding="4dp"
+        android:text=" 用户名称"
+        android:textColor="@color/home_text1"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical"
+        android:padding="4dp"
+        android:text="刚刚"
+        android:textColor="@color/home_text1"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_commentUserName"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/CommentUserImg"
+        android:text="这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区"
+        android:textColor="@color/home_text1"
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_institution"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/CommentUserImg"
+        android:background="@color/search_history_bg">
+        <!--机构图片-->
+        <ImageView
+            android:id="@+id/img_institute"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/tv_institute_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/img_institute"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/home_text1"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_institute_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_institute_name"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/img_institute"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/home_text1"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/layout_institution"
+        android:layout_marginTop="10dp"
+        android:background="@color/home_gray_bg"/>
+
+</RelativeLayout>

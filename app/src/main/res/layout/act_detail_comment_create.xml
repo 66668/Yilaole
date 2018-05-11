@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/topbar_common_itt"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:drawablePadding="8dp"
+                android:drawableStart="@mipmap/img_comment"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="@string/comment_institute"
+                android:textColor="@color/home_text2"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <TextView
+                    android:id="@+id/tv_jigou0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/institute_ratingBar"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/institute_ratingBar"
+                    android:layout_marginStart="37dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/instite_detail_comment_jigou"
+                    android:textColor="@color/home_text2"
+                    android:textSize="17sp"/>
+
+                <RatingBar
+                    android:id="@+id/institute_ratingBar"
+                    style="?android:ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_toEndOf="@+id/tv_jigou0"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1.0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/servuce_ratingBar"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/servuce_ratingBar"
+                    android:layout_marginStart="37dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/instite_detail_comment_service"
+                    android:textColor="@color/home_text2"
+                    android:textSize="17sp"/>
+
+                <RatingBar
+                    android:id="@+id/servuce_ratingBar"
+                    style="?android:ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/tv_jigou0"
+                    android:isIndicator="false"
+                    android:max="5"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1.0"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="@string/comment_content_hint"
+                android:paddingBottom="10dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/home_text2"
+                android:textColorHint="@color/filter_reset_btn_cl"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="15dp"
+                android:text="@string/comment_number_hint"
+                android:textColor="@color/filter_reset_btn_cl"
+                android:textSize="12sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/photo_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="92dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_bg"/>
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="280dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/sure_btn_style"
+                android:text="@string/appointVisit_sure"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--地图slidingup 显示lib-->
+    <declare-styleable name="SlidingUpPanelLayout">
+
+        <attr name="umanoPanelHeight" format="dimension"/> <!--设置面板高度-->
+        <attr name="umanoShadowHeight" format="dimension"/><!--滑动面板上方的阴影高度-->
+        <attr name="umanoParallaxOffset" format="dimension"/><!--添加视差主视图-->
+        <attr name="umanoFadeColor" format="color"/><!--当面板向上滑动的主要内容变暗的颜色-->
+        <attr name="umanoFlingVelocity" format="integer"/>
+        <attr name="umanoDragView" format="reference"/>
+        <attr name="umanoScrollableView" format="reference"/>
+        <attr name="umanoOverlay" format="boolean"/>
+        <attr name="umanoClipPanel" format="boolean"/>
+        <attr name="umanoAnchorPoint" format="float"/><!--允许面板的中间展开状态（类似于谷歌地图）在屏幕的中间设置一个锚点-->
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0"/><!--拖动状态-->
+            <enum name="collapsed" value="1"/><!--默认状态-->
+            <enum name="anchored" value="2"/><!--锚点-->
+            <enum name="hidden" value="3"/><!--隐藏状态-->
+        </attr>
+        <attr name="umanoScrollInterpolator" format="reference"/>
+    </declare-styleable>
+
+    <!---->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+</resources>

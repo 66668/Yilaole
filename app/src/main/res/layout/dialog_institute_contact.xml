@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="307dp"
+                android:layout_height="315dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dialog_contact_style">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/institutecontact_bg"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp">
+
+        <TextView
+            android:id="@+id/tv_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拨打"
+            android:textColor="@color/home_text1"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_0"
+            android:text=" 010-1234567"
+            android:textColor="@color/colorPrice"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_phoneNumber"
+            android:text="联系机构"
+            android:textColor="@color/home_text1"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="220dp"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/sure_btn_style"
+        android:text="马上拨打"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+
+</RelativeLayout>

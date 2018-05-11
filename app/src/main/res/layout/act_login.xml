@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical"
+    app:theme="@style/TranslucentAppTheme"
+    tools:context="com.yilaole.ui.LoginActivity">
+
+    <!-- 关闭-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/for_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:background="@mipmap/login_close"/>
+
+    </RelativeLayout>
+
+    <!-- 用户名-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/tv_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="20dp"
+            android:drawableStart="@mipmap/login_user"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_login_user"
+            android:inputType="number"
+            android:lines="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/et_cursor_style"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"/>
+
+    <!-- 密码-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tv_ps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="20dp"
+            android:drawableStart="@mipmap/login_ps"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_login_ps"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="12"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/et_cursor_style"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/img_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="40dp"
+            android:background="@mipmap/ps_watch"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_forgetPs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/forgetPs"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_log"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_log_bg_select_style"
+            android:gravity="center"
+            android:text="@string/login_log"
+            android:textColor="@drawable/login_log_tv_select_style"
+            android:textSize="17sp"/>
+
+        <Button
+            android:id="@+id/btn_reg"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/btn_log"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_btn_select_style"
+            android:gravity="center"
+            android:text="@string/login_reg"
+            android:textColor="@drawable/login_log_tv_select_style"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/img_weichat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="@string/login_other"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/img_weichat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@mipmap/login_weichat"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

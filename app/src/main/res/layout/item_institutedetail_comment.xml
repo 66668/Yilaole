@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 机构详情评论item-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp">
+    <!-- 用户评论去-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="140dp">
+
+        <ImageView
+            android:id="@+id/CommentUserImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:background="@mipmap/photo_default"/>
+
+        <TextView
+            android:id="@+id/tv_commentUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/CommentUserImg"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text=" 用户名称"
+            android:textColor="@color/colorPrice"
+            android:textSize="14sp"/>
+
+        <!-- ratingBar-->
+        <LinearLayout
+            android:id="@+id/layout_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_commentUserName"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/CommentUserImg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_jigou"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:text="@string/instite_detail_comment_jigou"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"/>
+
+            <RatingBar
+                android:id="@+id/institute_ratingBar"
+                style="?android:ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true"
+                android:max="5"
+                android:numStars="5"
+                android:rating="4.0"
+                android:stepSize="1.0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:text="@string/instite_detail_comment_service"
+                android:textColor="@color/home_text1"
+                android:textSize="16sp"/>
+
+            <RatingBar
+                android:id="@+id/service_ratingBar"
+                style="?android:ratingBarStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.35"
+                android:isIndicator="true"
+                android:max="5"
+                android:numStars="5"
+                android:rating="2.0"
+                android:stepSize="1.0"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_UserComment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_score"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/CommentUserImg"
+            android:text="这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区这是用户评论区"
+            android:textColor="@color/institute_tv1"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_comment_userTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_UserComment_content"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@+id/CommentUserImg"
+            android:text="3小时前"
+            android:textColor="@color/filter_reset_tvcl"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/home_gray_bg"/>
+    </RelativeLayout>
+
+</RelativeLayout>

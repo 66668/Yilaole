@@ -1,0 +1,245 @@
+<resources>
+    <string name="app_name">颐福来养老</string>
+    <string name="action_settings">Settings</string>
+    <string name="remark_">备注：</string>
+    <string name="remark">备注</string>
+
+
+    <!-- ==================================================弹窗统一调用===================================================-->
+    <string name="dialog_login">请先登录</string>
+    <string name="aaa">请暂时移步颐福来网页\nwww.efulai.cn</string>
+    <string name="dialog_token">token超时，请重新登陆</string>
+    <string name="other">功能即将开通\n请移步颐福来：\nwww.efulai.cn</string>
+    <string name="tougao">欢迎广大作者投稿\n请发邮件至\ngctg@yilaole.com</string>
+
+    <!-- ===================================================主页===================================================-->
+    <string name="bottom_navigation_item_home">首页</string>
+    <string name="bottom_navigation_item_news">资讯</string>
+    <string name="bottom_navigation_item_institute">机构</string>
+    <string name="bottom_navigation_item_mine">我的</string>
+    <string name="home_institution">养老机构</string>
+    <string name="home_institution_map">养老地图</string>
+    <string name="home_institution_tell">在线评估</string>
+    <string name="home_news">最新资讯</string>
+    <string name="home_news_more">查看更多</string>
+
+    <!-- ===================================================主页-定位===================================================-->
+    <string name="cp_select_city">选择城市</string>
+    <string name="cp_hot_city">热门城市</string>
+    <string name="city_current_location">当前定位</string>
+    <string name="city_search_hint">请输入城市名称或首字母查询</string>
+    <string name="cp_nothing_found">没有搜索结果~</string>
+    <string name="cp_locating">正在定位…</string>
+    <string name="cp_located_failed">定位失败</string>
+
+    <!--===================================================首页-搜索===================================================-->
+    <string name="search_hot">热门机构</string>
+    <string name="search_history">历史搜索</string>
+
+    <!--===================================================我的===================================================-->
+    <string name="mine_login">登录</string>
+    <string name="mine_reg">注册</string>
+    <string name="mine_booktrce">预约参观</string>
+    <string name="mine_detail_pass">已申请</string>
+    <string name="mine_assess">上门评估</string>
+    <string name="mine_record">长者档案</string>
+    <string name="mine_center">个人中心</string>
+    <string name="mine_wallet">我的钱包</string>
+    <string name="mine_message">我的消息</string>
+    <string name="mine_store">收藏信息</string>
+    <string name="mine_store2">我的收藏</string>
+    <string name="mine_appraise">我的评价</string>
+    <string name="mine_about">关于我们</string>
+
+
+    <!--===================================================我的-设置===================================================-->
+
+    <string name="setting_name">设置</string>
+    <string name="setting_wifi">非Wi-Fi模式下省流量模式</string>
+    <string name="setting_message">允许消息推送</string>
+    <string name="setting_clear">清空缓存</string>
+
+    <!--===================================================我的-编辑===================================================-->
+    <string name="collect_name">编辑</string>
+    <!--===================================================我的-关于我们===================================================-->
+    <string name="about_insititute">更专业的养老信息服务平台</string>
+    <string name="about_web">官方网址:</string>
+    <string name="about_weblocal">www.efulai.cn</string>
+    <string name="about_feedback">反馈意见</string>
+    <string name="about_policy">隐私政策</string>
+    <string name="about_update">检查新版本</string>
+    <string name="about_update_new">好赞，已是最新版本</string>
+    <string name="feedback_hint">有什么不对的地方,请告诉我们...</string>
+    <string name="post">提交</string>
+
+    <!--===================================================我的-个人中心=======================================================-->
+    <string name="center_photo">头像</string>
+    <string name="center_name">修改昵称</string>
+    <string name="center_ps">修改密码</string>
+    <string name="center_logout">注销</string>
+    <string name="center_unlog">注销</string>
+    <string name="center_quit">退出程序</string>
+
+    <string name="mine_center_ps">修改密码</string>
+    <string name="mine_center_name">修改昵称</string>
+    <string name="center_ps_success">重置密码完成</string>
+    <string name="center_name_success">重置昵称完成</string>
+    <string name="center_ps_old">请输入原密码</string>
+    <string name="center_ps_new">请输入新密码</string>
+    <string name="center_name_change">请输入新昵称</string>
+    <string name="btn_sure">完成</string>
+    <string name="minecomment_feedback">机构回复：</string>
+
+
+    <!--===================================================我的-预约参观+上门评估=======================================================-->
+    <!--预约参观-->
+    <string name="visit_detailTitle">参观详情</string>
+    <string name="visit_bookid">订单编号</string>
+    <string name="visit_booktype">订单类型</string>
+    <string name="visit_bookstatus">订单状态</string>
+    <string name="visit_visitTime">预约的参观时间</string>
+    <string name="visit_institute">预约机构</string>
+    <string name="visit_contact">联系人姓名</string>
+    <string name="visit_contactPhone">联系方式</string>
+    <string name="visit_number">参观人数</string>
+    <string name="visit_olderName">长者姓名</string>
+    <string name="visit_olderAge">长者年龄</string>
+
+    <!--上门评估-->
+    <string name="door_institute_title">评估详情</string>
+    <string name="door_institute">上门评估机构</string>
+    <string name="door_assessTime">预约上门评估时间</string>
+    <string name="door_assessAdress">上门评估地址</string>
+    <string name="door_applicationTime">申请时间</string>
+    <string name="door_olderBirth">长者出生年月日</string>
+    <string name="door_assess_resultTime">评估时间</string>
+    <string name="door_assess_resultPerson">评估人员</string>
+    <string name="door_assess_result">评估结果</string>
+
+    <string name="mine_appointVisit">预约参观</string>
+    <string name="mine_doorAssess">上门评估</string>
+    <string name="appointVisit_institute">预约机构：</string>
+    <string name="appointVisit_Name">联系人姓名：</string>
+    <string name="appointVisit_Name_hint">请输入联系人姓名</string>
+    <string name="appointVisit_number">参观人数：</string>
+    <string name="appointVisit_number_hint">请输入参观人数</string>
+    <string name="appointVisit_older">长者姓名：</string>
+    <string name="appointVisit_older_hint">请输入长者姓名</string>
+    <string name="appointVisit_old">长者年龄：</string>
+    <string name="appointVisit_old_hint">请输入长者年龄</string>
+    <string name="appointVisit_contact">联系方式：</string>
+    <string name="appointVisit_contact_hint">请输入联系方法</string>
+    <string name="appointVisit_code">验证码：</string>
+    <string name="appointVisit_code_hint">请输入短信验证码</string>
+    <string name="appointVisit_getCode">发送验证码</string>
+    <string name="appointVisit_time">预约时间：</string>
+    <string name="appointVisit_time_hint">请选择预约时间</string>
+    <string name="appointVisit_sure">确定</string>
+
+    <string name="assess_place">上门地址：</string>
+    <string name="assess_place_hint">请输入上门地址</string>
+    <string name="assess_choose_older">请选择长者：</string>
+    <string name="assess_choose_older_hint">请选择</string>
+    <string name="assess_create_older">未找到长者？新增长者档案</string>
+    <string name="assess_remark_hint">相信说明一下内容...</string>
+    <string name="assess">评价</string>
+    <string name="status_">状态:</string>
+    <string name="buyTime">下单时间：</string>
+
+    <!-- ===================================================登录===================================================-->
+    <string name="hint_login_user">请输入手机号</string>
+    <string name="hint_login_ps">请输入密码</string>
+    <string name="hint_change_ps">请输入新密码</string>
+    <string name="get_identy">获取验证码</string>
+    <string name="hint_identy_ps">请输入验证码</string>
+    <string name="forgetPs">忘记密码？</string>
+    <string name="login_log">登录</string>
+    <string name="login_reg">注册</string>
+    <string name="login_reg_2">立即注册</string>
+    <string name="login_nextstep">下一步</string>
+    <string name="login_done">完成</string>
+    <string name="login_other">选择第三方登录</string>
+    <string name="login_regist_notes">我已阅读并同意《颐福来用户使用协议》</string>
+
+
+    <!--=================================================== 机构详情===================================================-->
+    <string name="instite_detail_booktrce">预约参观</string>
+    <string name="instite_detail_assess">上门评估</string>
+    <string name="instite_detail_mytell">我要评价</string>
+    <string name="instite_detail_internetTo">联系机构</string>
+    <string name="instite_detail_renlingjigou">认领机构</string>
+    <string name="instite_detail_yirenling">已认领</string>
+    <string name="instite_detail_civilianRun">民办</string>
+    <string name="instite_detail_StateRun">公办</string>
+    <string name="instite_detail_entered">入驻机构</string>
+    <string name="instite_detail_noEntering">未入驻</string>
+    <string name="instite_detail_entering">已认领</string>
+    <string name="instite_detail_phone">机构电话</string>
+    <string name="instite_detail_establishmentTime">成立日期</string>
+    <string name="instite_detail_bedCount">床位数量</string>
+    <string name="instite_detail_picture">机构图片</string>
+    <string name="instite_detail_special">机构特色</string>
+
+    <string name="instite_detail_yiyangjiehe">医养结合</string>
+    <string name="instite_detail_jieshouyidi">接收异地</string>
+    <string name="instite_detail_jujiashangmen">居家上门</string>
+    <string name="instite_detail_hezuoyiyuan">合作医院</string>
+    <string name="instite_detail_yiliaobaoxiao">医疗报销</string>
+    <string name="instite_detail_changqizhaohu">长期照护险</string>
+    <string name="instite_detail_zhuanzhentongdao">转诊通道</string>
+    <string name="instite_detail_mianfeishizhu">免费试住</string>
+
+    <string name="instite_detail_notes">服务须知</string>
+    <string name="instite_detail_detail">服务明细</string>
+    <string name="instite_detail_yiyangtese">医养特色</string>
+    <string name="instite_detail_jigouzizhi">机构资质</string>
+    <string name="instite_detail_quanjing">360全景</string>
+    <string name="instite_detail_videojieshao">视频介绍</string>
+    <string name="instite_detail_chengcheluxian">乘车路线</string>
+    <string name="instite_detail_shoufeibiaozhun">收费标准</string>
+    <string name="instite_detail_gallery">机构相册</string>
+    <string name="instite_detail_yonghudianping">用户点评</string>
+    <string name="instite_detail_title">机构点评</string>
+
+
+    <string name="instite_detail_yuanzhangjiyu">院长寄语</string>
+    <string name="instite_detail_jigoujianjie">机构简介</string>
+    <string name="instite_detail_score_intruduction">颐福来指数：记录机构综合服务质量变化情况。</string>
+    <string name="instite_detail_score_message">信息</string>
+    <string name="instite_detail_score_estimate">评价</string>
+    <string name="instite_detail_score_userEstimate">用户评价</string>
+
+    <string name="instite_detail_deany">院长还没有留下寄语</string>
+
+
+    <!--机构评价-->
+    <string name="comment_institute">给机构评价</string>
+    <string name="comment_content_hint">亲，机构服务如何，机构环境满意吗？</string>
+    <string name="comment_number_hint">至少10字评价</string>
+
+
+    <!-- ===================================================评论===================================================-->
+    <string name="instite_detail_comment_jigou">机构:</string>
+    <string name="instite_detail_comment_service">服务:</string>
+
+    <!--===================================================首页 在线评估===================================================-->
+    <string name="assess_title_container">评估结果作为长者档案的重要指标，\n 请先选择需要评估的长者。</string>
+    <string name="assess_birthday">出生年月：</string>
+    <string name="assess_online">在线\n评估</string>
+
+
+    <!--===================================================资讯页=================================================== -->
+    <string name="news_Best">精品资讯</string>
+    <string name="news_shareTo">分享到:</string>
+    <string name="news_weichats">微信</string>
+    <string name="news_friends">朋友圈:</string>
+    <string name="news_hot">热门文章</string>
+    <string name="news_comment">最新评论</string>
+    <string name="news_comment_hing">写下你的看法。</string>
+
+    <!--RecyclerViewAdapterHelper源码 -->
+    <string name="loading">正在加载中...</string>
+    <string name="load_failed">加载失败，请点我重试</string>
+    <string name="load_end">没有更多数据</string>
+
+</resources>

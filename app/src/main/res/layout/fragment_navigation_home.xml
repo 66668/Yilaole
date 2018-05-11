@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yilaole.widget.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <!-- 轮播图
+        app:layout_scrollFlags="scroll|enterAlways"-->
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:layout_scrollFlags="scroll">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_shuffling"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/commonColor"/>
+
+            <LinearLayout
+                android:id="@+id/ll_index_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/home_banner_index_mask"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+        </RelativeLayout>
+
+        <!-- 功能模块-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!-- 养老机构-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:background="@color/nursing_institution_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@mipmap/icon_mechanism"
+                    android:gravity="center_horizontal"
+                    android:text="@string/home_institution"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+            <!-- 养老地图-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:background="@color/nursing_institution_map_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@mipmap/icon_map"
+                    android:gravity="center_horizontal"
+                    android:text="@string/home_institution_map"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <!-- 在线评估-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:background="@color/nursing_institution_tell_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@mipmap/icon_assessment"
+                    android:gravity="center_horizontal"
+                    android:text="@string/home_institution_tell"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/home_gray_bg"/>
+        <!-- 消息轮播/跑马灯-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@mipmap/img_1"/>
+
+            <lib.yilaole.textbanner.MarqueeLayout
+                android:id="@+id/marquee_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                app:enableAlphaAnim="true"
+                app:enableScaleAnim="false"
+                app:orientation="up"
+                >
+            </lib.yilaole.textbanner.MarqueeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/home_gray_bg"/>
+
+        <!-- 最新资讯-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:drawablePadding="7dp"
+                android:drawableStart="@mipmap/icon_information"
+                android:text="@string/home_news"
+                android:textColor="@color/home_text1"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:text="@string/home_news_more"
+                android:textColor="@color/home_text2"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <!-- 资讯横向滑动-->
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/home_gray_bg"/>
+
+        <!-- 热门、优惠-->
+        <LinearLayout
+            android:id="@+id/home_tab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:tag="aaa">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="热门精品"
+                android:textSize="14sp"
+                app:tabIndicatorColor="@color/commonColor"
+                app:tabSelectedTextColor="@color/commonColor"
+                app:tabTextColor="@color/home_text1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="特价优惠"
+                app:tabIndicatorColor="@color/commonColor"
+                app:tabSelectedTextColor="@color/commonColor"
+                app:tabTextColor="@color/home_text1"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/vertical_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</com.yilaole.widget.MyScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+        <!-- 中-->
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+
+        <!-- 右-->
+        <TextView
+            android:id="@+id/tv_right"
+            style="@style/topbarText.topbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            />
+        <!--左 -->
+        <RelativeLayout
+            android:id="@+id/layout_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/back_icon"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <lib.yilaole.gallery.HackyViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_buttombar"
+        android:layout_below="@+id/layout_topbar"
+        android:background="@color/institution_gallery_bg"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_buttombar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+        <!-- 图片标题-->
+        <TextView
+            android:id="@+id/tv_detailContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="invisible"/>
+
+        <!-- 右-->
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@mipmap/gallery_more"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

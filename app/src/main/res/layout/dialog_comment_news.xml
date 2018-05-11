@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/dialog_comment_style">
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:paddingEnd="9dp"
+        android:paddingStart="9dp"
+        android:text="取消"
+        android:textColor="#666666"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:paddingEnd="9dp"
+        android:paddingStart="9dp"
+        android:text="发布"
+        android:textColor="@color/home_text2"
+        android:textSize="16sp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_send"
+        android:background="@color/home_gray_bg"/>
+
+    <EditText
+        android:id="@+id/et_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        android:background="@null"
+        android:gravity="top|left"
+        android:hint="添加评论..."
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/home_text1"
+        android:textSize="16sp"/>
+
+</RelativeLayout>
