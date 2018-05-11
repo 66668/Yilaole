@@ -1,5 +1,6 @@
 颐老乐app开发中难点记录：
 ====
+（说明：目前已停止维护开发，所有代码目前已很规范，如果接口不能使用，请根据gif效果自己研究----2018.05.11 sjy,如有疑问，请联系本人邮箱，有问必答）
 产品要求android5.0以上
 
 //====================================================个人进度提示=====================================================
@@ -137,7 +138,8 @@
  
  定位要求的功能是 进入首页首先定位，并根据定位获取该城市的信息显示到首页对应的布局中。
  点击定位，选择要查看的城市，然后获取选择城市的信息
- 这块设计，主要参考： https://github.com/zaaach/CityPicker，源码在com.yilaole.map.location包下。
+ 这块设计，主要参考： https://github.com/zaaach/CityPicker
+ ，源码在com.yilaole.map.location包下。
 
   效果很好，基本上改改UI，用自己的高德key就可以使用。
   同时还需要修改一个地方：mianActivty的基类需要重写onActivityResult方法，
@@ -212,7 +214,8 @@ getItemViewType->onCreateDefViewHolder->onBindViewHolder）。
 
  这一块的筛选，类似猎聘app,多条件筛选，参考了俩款开源:
  https://github.com/baiiu/DropDownMenu
- https://github.com/dongjunkun/DropDownMenu,源码在com.yilaole.filter包下
+ https://github.com/dongjunkun/DropDownMenu
+ ,源码在com.yilaole.filter包下
  本app做了适当修改，解决了里头未考虑的bug和三级省市区筛选View,
  筛选包括：
  （1）省市区三级联动筛选（保留了参考的二级筛选代码，可以替换看一下效果）；
@@ -220,12 +223,14 @@ getItemViewType->onCreateDefViewHolder->onBindViewHolder）。
  （3）单gridView筛选
  （4）简单的listView的String筛选
  筛选的数据来自后台，不过可以自己修改成本地（看代码很容易修改）
+ 目前本人以单独摘取出来，请参考：https://github.com/66668/DropDownMenuplus
  gif效果图如下：
  
  其中的难点解析：
  （1）多条件筛选中使用 list<T>.contains(tag)时，出现了问题，当时使用tag为String,且重写T对象的equals和hasCode方法，返回都是false，所以将tag提升成T对象比较，返回正确结果;
  （2）recyclerView复用item导致item状态混乱的问题，比如，选中该item后，划出屏幕，再划回来，item状态没有显示或者别的item显示选中（状态混乱）
- 解决思路是用数据源的数据保存item状态：http://blog.csdn.net/fesdgasdgasdg/article/details/52069164，虽然对数据不友好，但是考虑的代码少，简单高效
+ 解决思路是用数据源的数据保存item状态：http://blog.csdn.net/fesdgasdgasdg/article/details/52069164
+ ，虽然对数据不友好，但是考虑的代码少，简单高效
   问题出处：com.yilaole.filter.typeview包下的MultiGridView+MultiGridAdapter的item适配。
   
 #机构详情技术点：
@@ -314,6 +319,7 @@ http://www.jianshu.com/p/06c0ae8d9a96/
 
 ####2.toobar颜色随滑动变化（系统是变成主题颜色），此处做监听处理，变化成各种颜色
 http://blog.csdn.net/qq402164452/article/details/53760203
+
 ####3.toolbar的title居中问题，以及 跟随滑动 title隐藏于显示
 toolbar中设置如下参数，可实现 title居中效果，但是字体不能动态隐藏和显示
 
@@ -322,12 +328,14 @@ toolbar中设置如下参数，可实现 title居中效果，但是字体不能�
 
 解决：监听CollapsingToolbarLayout的滑动，根据滑动状态，动态显示title
  代码见InstitutionDetailActivity
+ 
 ####4 toolbar中Menu的问题：如何动态修改MenuItem的图标颜色
 使用Toolbar.OnMenuItemClickListener方法，然后item.setIcon修改图标即可
 注：onOptionsItemSelected方法无反应！
  
 ###5.咨询详情评论的弹窗效果：
 https://github.com/66668/PureComment
+
 ###6.appBarLayout+newsScrollView的边界阴影问题：
 appbarLayout的阴影，在xml中添加 app：elevation = "0dp"属性去除
 
@@ -389,7 +397,7 @@ appbarLayout的阴影，在xml中添加 app：elevation = "0dp"属性去除
  （2）若还是有阴影，那就有可能是appbarLayout的阴影，在xml中添加 app：elevation = "0dp"属性去除
                    
     
-#在线评估技术要点:
+##在线评估技术要点:
 
 ##关于recyclerView的优化框架BaseRecyclerViewAdapterHelper：
 使用的是github的 BaseRecyclerViewAdapterHelper，具体源码位置在com.yilaole.base.adapterbase包下。
@@ -427,7 +435,8 @@ false:Et.setTransformationMethod(PasswordTransformationMethod.getInstance());
 #退出登录设计：
 
 #地图功能中的上拉设计：
-使用的框架：https://github.com/umano/AndroidSlidingUpPanel，已经集成到项目目录下：com.yilaole.map.slidingup。
+使用的框架：https://github.com/umano/AndroidSlidingUpPanel
+，已经集成到项目目录下：com.yilaole.map.slidingup。
 
 
 #WebView的使用：
