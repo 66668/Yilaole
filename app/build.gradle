@@ -127,7 +127,6 @@ dependencies {
     implementation 'junit:junit:4.12'
 
     //底部按钮框架libarary依赖
-
     implementation project(':library:ahbottomnavigation')
 
     //文字轮播libaray依赖
@@ -158,8 +157,8 @@ dependencies {
     //网络请求 本版本需要 gson retrofit(同时还要 converter和adapter) okhttp3
     implementation 'com.google.code.gson:gson:2.8.0'
 
-    //Gson
-    //retrofit依赖
+
+    //retrofit依赖 请求结果适配
     implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 
     //gson converter
@@ -195,5 +194,4 @@ dependencies {
 
     //微信 登陆 分享（无统计功能）
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
-
 }
