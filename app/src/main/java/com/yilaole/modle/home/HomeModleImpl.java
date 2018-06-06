@@ -24,13 +24,11 @@ import rx.schedulers.Schedulers;
 public class HomeModleImpl implements INavHomeModle {
     public static final String TAG = "HOME";
 
-
     /**
      * 01 搜索轮播
      *
      * @param listener
      */
-
     @Override
     public void mLoadSearchData(String city, final OnNavHomeListener listener) {
 

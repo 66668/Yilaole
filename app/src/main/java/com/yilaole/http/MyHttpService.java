@@ -50,14 +50,9 @@ import retrofit2.http.Part;
 import rx.Observable;
 
 /**
- * Created by jingbin on 16/11/21.
- * 网络请求类（一个接口一个方法）
- * get 无参 和有参样式
- * post 纯文本样式（表单），文本+文件 文本+多文件
- * <p>
- * <p>
- * <p>
- * 注:使用Observable<BaseBean<AddnewReturnBean>> AddnewEmployee(@Field("Obj") String bean);形式时出现gson解析bug,没发用泛型，后续解决
+ * Rxjava+retrofit的封装，用于调用详细接口信息
+ * Rxjava的响应式流程+retrofit的注解机制
+ * 具体的操作，需要看MVP下的M层操作
  */
 
 public interface MyHttpService {
@@ -70,7 +65,6 @@ public interface MyHttpService {
             return HttpUtils.getInstance().getServer(MyHttpService.class);
         }
     }
-
 
     /**
      ********************************************--首页相关--********************************************************

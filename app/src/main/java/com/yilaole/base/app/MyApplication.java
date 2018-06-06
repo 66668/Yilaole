@@ -41,7 +41,7 @@ public class MyApplication extends Application {
         super.onCreate();
         MyApplication = this;
 
-        //设置打印,正式打包，设为 false
+        //比较好用的Log封装，推荐使用
         MLog.init(true, "SJY");//true
 
         //初始化网络

@@ -144,7 +144,7 @@ public class HttpUtils {
         builder.baseUrl(apiUrl);//设置远程地址
 
         //官方的json解析，要求格式必须规范才不会异常，但后台的不一定规范，这就要求自定义一个解析器避免这个情况
-        builder.addConverterFactory(GsonConverterFactory.create());
+        builder.addConverterFactory(GsonConverterFactory.create());//将规范的gson及解析成实体
         //        builder.addConverterFactory(JsonResultConvertFactory.create());//自定义的json解析器
 
 
@@ -280,16 +280,21 @@ public class HttpUtils {
      * @return
      */
     public OkHttpClient getUnsafeOkHttpClient2() {
+        //log打印级别
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(HttpLoggingInterceptor.Logger.DEFAULT);
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         try {
             //具体配置，可用链式结构
             OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
             //            okBuilder.cache(cache);//自定义缓存路径
             okBuilder.readTimeout(20, TimeUnit.SECONDS);
-            okBuilder.connectTimeout(10, TimeUnit.SECONDS);
+            okBuilder.connectTimeout(10*1000, TimeUnit.MILLISECONDS);
             okBuilder.writeTimeout(20, TimeUnit.SECONDS);
             okBuilder.addInterceptor(new CacheInterceptor());//添加缓存拦截器
             okBuilder.addNetworkInterceptor(new CacheInterceptor());//添加缓存拦截器
-            okBuilder.addInterceptor(getInterceptor());//设置拦截器,打印
+            okBuilder.addInterceptor(loggingInterceptor);//设置拦截器,打印//getInterceptor()为默认的，现在改为自定义
+            okBuilder.cache(cache);//设置缓存
             okBuilder.hostnameVerifier(new HostnameVerifier() {
                 @Override
                 public boolean verify(String hostname, SSLSession session) {
